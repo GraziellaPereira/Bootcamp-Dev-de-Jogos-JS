@@ -1,0 +1,39 @@
+PORTFÓLIO 
+
+- Github p/ programadores
+- ArtStation p/ artistas
+- Itch.io p/ jogos finalizados
+- Sites próprios p/ portfólios profissionais
+- Notion p/ portfólios flexíveis 
+
+
+PLANO DE APRENDIZADO
+
+O que você quer fazer para chegar no objetivo final?
+- Objetivo final: onde você quer chegar daqui uns anos?
+- Passo a passo: o que é preciso fazer para sair de onde você está hoje para chegar no objetivo.
+- Inspirações e motivações: por que você quer fazer isso? o que te move?
+
+
+PUBLICAR JOGOS
+
+Termine e publique seus projetos.
+- Desenvolver protótipos: algo simples, que você consiga terminar. Um jogo básico.
+- Finalizar projetos do começo ao fim.
+- Sempre manter o escopo pequeno.
+
+ETAPAS DE DESENVOLVIMENTO
+
+1. Idealização: ideia inicial do jogo
+2. Protótipo: criar um jogo simples, com código feio, não gastar muito tempo nele, apenas feito pra testar se a ideia é boa.
+3. Fatia vertical: garante que a direção vai ser boa, você faz uma mecânica do jogo pra ver se funcionará bem, se o jogo for bonito, a fatia também deverá ser, valida as etapas anteriores.
+4. 4. Início da produção: começa do 0, não reutiliza o básico do protótipo, cria sistemas, renderização, efeitos sonoros.
+5. Alpha: "feature complete", todas as funcionalidades, esqueleto do jogo, está pronto.
+6. Beta: conteúdo completo, expande o que estava na alpha.
+7. Versão final: hora que o jogo é polido, deixa mais bonito, coloca tradução.
+8. Lançamento: termina a integração com a plataforma que o jogo irá lançar. Certificar que a versão final é válida para outras plataformas.
+
+
+PRINCIPAIS PLATAFORMAS E TECNOLOGIAS
+
+Unity, Unreal, Godot, Love p/ lua, LibidGDX p/ java (engines).
