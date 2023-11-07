@@ -3,8 +3,8 @@
 <div style="display: flex; align-items: center;">
   <img src="https://media.tenor.com/FP3KLUuiKOkAAAAC/computer-typing.gif" alt="Gif of a girl using computer" align="left" width="400" height="350" style="margin-right: 20px;" />
   <div>
-    <p>Primeiro desafio de projeto para o bootcamp da DIO de dev de jogos em JS.</p>
-    <p>Confira meu repositório de outro bootcamp da DIO: <a href="https://github.com/GraziellaPereira/Resumos-Bootcamp-Fullstack-Java-Angular">Bootcamp Fullstack Java + Angular</a></p>
+    <p> Primeiro desafio de projeto para o bootcamp da DIO de dev de jogos em JS.</p>
+    <p> Confira meu repositório de outro bootcamp da DIO: <a href="https://github.com/GraziellaPereira/Resumos-Bootcamp-Fullstack-Java-Angular">Bootcamp Fullstack Java + Angular</a></p>
   </div>
 </div>
 
