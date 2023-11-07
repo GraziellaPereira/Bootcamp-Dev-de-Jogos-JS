@@ -1,11 +1,16 @@
 # Repositório do desafio de projeto sobre Git/GitHub da DIO
-Primeiro desafio de projeto para o bootcamp da DIO de dev de jogos em JS.
-Confira meu repositório de outro bootcamp da DIO: [Bootcamp Fullstack Java + Angular](https://github.com/GraziellaPereira/Resumos-Bootcamp-Fullstack-Java-Angular)
+
+<div style="display: flex; align-items: center;">
+  <img src="https://media.tenor.com/FP3KLUuiKOkAAAAC/computer-typing.gif" alt="Gif of a girl using computer" align="left" width="400" height="350" style="margin-right: 20px;" />
+  <div>
+    <p>Primeiro desafio de projeto para o bootcamp da DIO de dev de jogos em JS.</p>
+    <p>Confira meu repositório de outro bootcamp da DIO: <a href="https://github.com/GraziellaPereira/Resumos-Bootcamp-Fullstack-Java-Angular">Bootcamp Fullstack Java + Angular</a></p>
+  </div>
+</div>
 
 ## Links Úteis
 [Sintaxe Basica Markdown](https://www.markdownguide.org/basic-syntax/)
 
-<img align="right" width="100" height="100" src="![image](https://github.com/GraziellaPereira/Bootcamp-Dev-de-Jogos-JS/assets/134076345/5e044326-8982-47a9-9380-4e796b9958c7)
-">
+
 
 
