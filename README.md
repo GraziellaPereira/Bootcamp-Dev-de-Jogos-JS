@@ -5,4 +5,7 @@ Confira meu repositório de outro bootcamp da DIO: [Bootcamp Fullstack Java + An
 ## Links Úteis
 [Sintaxe Basica Markdown](https://www.markdownguide.org/basic-syntax/)
 
+<img align="right" width="100" height="100" src="![image](https://github.com/GraziellaPereira/Bootcamp-Dev-de-Jogos-JS/assets/134076345/5e044326-8982-47a9-9380-4e796b9958c7)
+">
+
 
