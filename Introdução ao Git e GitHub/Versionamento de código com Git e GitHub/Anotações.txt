@@ -1,0 +1,114 @@
+O que é versionamento de código?
+
+É uma divisão dos códigos em versões, dividindo em tarefas o que cada parte da equipe vai fazer. Cada alteração do código gera uma nova versão.
+-> Sistemas de Controle de Versão
+- Registra o histórico de atualizações feitas em um arquivo
+- Gerencia quais foram as alterações, ex: data, autor
+- Organização, controle e segurança
+Não sobe todo o código novamente, só o trecho que alterou.
+-> Tipos de Sistemas de Controle de Versão (VCS)
+- VCS Centralizado (CVCS) // CVS, Subversion                                                                                                                                              -> Um servidor contém o banco de versões, se estiver fora do ar, perde as atualizações.
+- VCS Distribuído (DVCS) // Git, Mercurial
+-> Duplicado localmente, os usuários tem uma cópia das versões.
+-> Clona o repositório completo
+-> Não precisa de conexão com a rede para trabalhar
+
+
+Fluxo básico no Git
+
+
+(Screenshot de um slide da aula)
+
+- Git clone -> Clona um repositório Git existente para uma pasta local. Precisa gerar um token para clonar algo do GitHub pro Git. Sintaxe: git clone link
+- Git commit -> Grava alterações no seu repositório
+- Git pull -> Traz as alterações do repositório para o local
+- Git push -> Traz as alterações do repositório local para o remoto (site do Git)
+
+
+Diferença entre Git e GitHub
+
+Git: Trabalha com o versionamento de código, banco de versões, gerenciamento de versões
+GitHub: Trabalha com o servidor que hospeda seu repositório remoto
+
+
+Comandos Git
+
+- Git config -> Permite visualizar e definir variáveis de configurações. São armazena das em 3 lugares: Git Global - Configurações do usuário // Git System - Configurações do sistema // Git Local - Configurações de um repositório específico.  
+Sintaxe: git config --global
+adicionar --list: mostra a lista das configurações alteradas
+É possível ver mais comandos no próprio site do Git
+Se você mudar seu username, ele não será alterado nas versões antigas, apenas a partir do momento da troca.
+Seta pra cima: retorna a informação 
+- Comando para não precisar inserir o token toda hora: git config --global credential.helper store
+- Comando para ver onde está o git config no pc: git config --global --show-origin credential.helper
+-  Cat -> Retorna onde contém uma informação 
+Sintaxe: cat .informação Ex: cat .git-credentials
+
+
+Criando e clonando repositórios
+
+Há duas maneiras de obter um repositório Git em sua máquina:
+- Transformar um diretório local que não esta sob controle de versão num repositório Git - Git init
+- Clonando um repositório Git existente - Git clone
+
+
+Diretório local
+
+- Criar um diretório: mkdir nome-do-diretório
+- Mudar de diretório: cd diretório
+- Iniciar um repositório git: git init
+- Mudar o nome do diretório: git clone link novo-nome
+- Conectar o repositório remoto a pasta local: git remote add origin link-do-repositório-remoto
+
+Salvando alterações no diretório local
+
+- OBS: dar git add . toda vez que fazer alterações
+- Mostrar status da árvore de trabalho e área de preparação (index): git status
+- Criar arquivos no repositório: touch README.md
+Markdown: é uma linguagem de marcação simples, uma maneira mais simples de escrever algo estilo HTML
+- Adicionar conteúdo pelo repositório local: basta localizar o arquivo em sua pasta local e abri-lo com um editor de texto 
+- Gravar alterações: git add nome-do-arquivo
+- Informar sobre o versionamento: git commit -m"mensagem de commit"
+- Checar commits: git log
+- Colocar um arquivo em um local que permite que ele não seja visto (git ignore):  echo arquivo/ > .gitignore
+- Remover do gitignore: echo > .gitignore
+- Fazer com que um diretório vazio seja reconhecido: touch pasta/.gitkeep -> O gitkeep adiciona um arquivo git para que o diretório seja reconhecido mesmo estando vazio
+- Inserir todos os arquivos de uma vez na área de preparação: git add .
+- Remover repositório feito na pasta errada: é preciso excluir o arquivo .git, para isso, basta usar o comando rm -rf .git
+- Restaurar um arquivo da árvore de trabalho: git restore nome-do-arquivo, usar apenas quando algo for apagado, e não quando houver feito alterações, senão as alterações serão perdidas.
+- Alterar a mensagem do último commit: git commit --amend -m "nova mensagem", se não colocar o "-m" abre o editor da mensagem.
+- Desfazer mensagem do commit: git reset --soft hash do commit (pega os arquivos do commit e adiciona na área de preparação) // git reset --mixed hash do commit (pega os arquivos do commit e tira da área de preparação) // git reset --hard hash do commit (apaga os arquivos do commit)
+- Histórico detalhado das alterações feitas: git reflog
+- Adicionar arquivos na pasta: touch pasta/nome-do-arquivo
+- Outra forma de tirar da área de preparação:  git restore --staged nome-do-arquivo
+
+
+Enviando e baixando alterações com o repositório remoto
+
+- Conectar o repositório remoto com o local: git remote add origin link do repositório remoto criado
+- Enviar alterações do repositório local para o remoto: git push -u origin main
+- Abrir o web editor do GitHub: atalho -> tecla . (o web editor é como o VScode).
+- Baixar alterações do repositório remoto para o local: git pull
+
+
+
+
+Trabalhando com Branches - Criando, Mesclando, Deletando e Tratando Conflitos
+
+Uma branch é basicamente uma ramificação do seu projeto. A branch não altera a branch principal. Ao criar uma nova branch dentro de uma já existente, ela aponta pro mesmo commit da existente. Se criar um commit nessa nova branch, ela não irá alterar o commit da branch principal que já existia.
+- Criar uma nova branch: git checkout -b nome
+- Listar o último commit de cada branch: git branch -v
+- Mesclar alterações das branches: git merge nome da branch que irá mesclar com a main
+- Excluir branch: git branch -d nome da branch a ser excluída
+
+
+-> Alguns conflitos que podem ocorrer
+
+- Conflitos de merge: acontece quando há alterações concorrentes, a mesma linha de código é alterada por duas pessoas. Exemplo: uma pessoa alterou no repositório local e outra no remoto. É preciso decidir uma alteração para manter.
+
+
+Trabalhando com Branches - Comandos Úteis no Dia a Dia
+
+- Git fetch origin branch: Baixar alterações do repositório remoto sem mesclar com o repositório local, depois se quises passar para o local, basta utilizar git merge origin/branch
+- Git clone link --branch nome-da-branch --single-branch: Clonar apenas uma branch de um repositório com várias branches
+- Git stash: Arquiva uma modificação. Útil para criar uma nova branch sem que uma modificação vá junto. Se você quiser ver a lista das modificações arquivadas, use: git stash list. Trazer as modificações e excluir o arquivamento: git stash pop. Trazer sem excluir: git stash apply

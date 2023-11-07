@@ -2,3 +2,6 @@ Download do Git: https://git-scm.com/downloads
 - Git Bash: um terminal estendido para otimizar o uso do Git.
 COMANDOS
 Git Status: mostra o status de seu repositório.
+Git add: considera o arquivo no controle de versão local.
+Git commit -m: adicionar um commit com mensagem.
+Git push origin branch (normalmente denominada "main): traz as atualizações do seu repositório local para o remoto.
