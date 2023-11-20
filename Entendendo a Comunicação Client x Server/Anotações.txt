@@ -1,0 +1,98 @@
+# Criando suas primeiras páginas em HTML e CSS
+
+# **PRIMEIROS COMPUTADORES**
+
+## **1a Geração (1951 a 1959)**
+
+**Computadores eletromecânicos.**
+
+- Harvard Mark I (1944), máquina de cálculo baseada em válvulas.
+- Colossus (1946), criptoanálises, cenário da segunda grande guerra, era pra cálculos de guerra.
+- ENIAC (1946), é mais automático do que o Mark I, com ele surge o termo “bug”
+
+## **2a Geração (1959 a 1965)**
+
+**Evolução das válvulas para transistores, permitiu uma diminuição no tamanho dos computadores.**
+
+## **3a Geração (1965 a 1970)**
+
+**Circuitos integrados (chips)**
+
+- Transistor
+- Capacitor
+- Resistor
+
+## **4a Geração (a partir de 1971)**
+
+**De circuitos integrados, passou para microprocessadores, marcada pelos computadores pessoais. Apple cria o mouse.**
+
+# **SURGIMENTO DA INTERNET**
+
+Já surgiu como um sistema de comunicação, começando com o telégrafo, um cabo que permitiu a comunicação intercontinental.
+
+- Licklider, pai da computação em nuvem teorizou sobre uma rede em que todos poderiam se comunicar.
+- Depois de muita pesquisa, surge a Arpanet, permitindo um sistema de comunicação em pacotes, enviados um a um e que permitia múltiplos destinos. Além disso teve o estudo sobre nós: pontos de interseção de informações funcionando como “checkpoints”, tipo o avô dos roteadores.
+- Em 1989, Tim Berners-Lee decidiu unir hipertexto (HTML) com TCP/IP e criou a World Wide Web (WWW). Assim surge o primeiro navegador, denominado WorldWideWeb. Portanto, o computador deixa de ter fins científicos, de guerra, para ter fins populares.
+
+# CLIENTE NO LINGUAJAR DA WEB
+
+Lado cliente: você consome a informação de um certo lugar na internet
+
+Lado servidor: serve as informações para o cliente.
+
+- Ao criar um site, você “hospeda” o seu arquivo de internet no servidor, assim quando alguém pesquisar seu site, ele aparecerá.
+- O cliente requisita uma informação, o servidor processa e devolve ao cliente.
+- Exemplos do que o server retorna: HTML, CSS, Javascript, Imagens… Esses arquivos são denominados de arquivos estáticos, são enviados de acordo com a velocidade da internet do cliente, além também do tamanho dos arquivos.
+- O navegador gera um cachê, salvando as informações no computador do cliente, assim o navegador não irá requisitar do servidor, mas sim do cachê.
+- É preciso criar designs responsivos para os diferentes equipamentos, é preciso considerar diferentes resoluções de tela.
+- É importante se preocupar com a compatibilidade entre navegadores.
+
+## NAVEGADORES
+
+- Navegadores precisam seguir um padrão chamado W3C para não serem tão diferentes. Ou seja, a base é igual.
+- Eles são programas criados por empresas para executar/abrir arquivos.
+- Iniciou com o MOSAIC, depois o Netscape e hoje temos uma grande variedade de navegadores.
+
+## APLICAÇÕES WEB
+
+São soluções criadas que possuem a internet como meio de comunicação entre client x server, não sendo necessário a sua instalação no PC.
+
+- Banco de dados ficam no servidor, na área do cliente tem informações mais simples.
+
+## DISPOSITIVOS MÓVEIS
+
+- Notebooks, celulares, tablets, smartwatchs.
+- 9 a cada 10 latino-americanos possuem um dispositivo móvel.
+
+# SOBRE SERVIDORES
+
+- Usa a conexão do cliente para fazer a comunicação entre eles. Ou se não, um servidor com uma rede local.
+- Em um servidor vários dispositivos se comunicam com ele. Quando o servidor é em uma rede local, é preciso de um pc mais forte.
+- Lidam com armazenamento de arquivos, segurança (firewall), streaming de dados, armazenamento e gerenciamento de e-mails, web…
+- Servidores podem ser um computador como também servidores gigantescos chamados de data center.
+- Há sistemas operacionais para servidores, por exemplo windows server, ubuntu.
+- Há também aplicações de apoio para o sistema operacional, a aplicação que processa a informação, o servidor só executa a aplicação. As mais populares são Apache e NgInx
+- Requisição http: solicitação de informação feita pelo client.
+
+## TIPOS DE SERVIDORES
+
+- **Proxy:** serve conexões para outros computadores seguindo regras, por exemplo: bloqueia acesso a certos sites. O proxy pode variar de usuário.
+- **Firewall:** função parecida com a do proxy, entretanto voltado mais para o acesso externo. Evita que usuários mandem arquivos maliciosos para a rede.
+- **Web Server:** exemplo: apache, site que bate na internet que bate no web server.
+- **Email server:** serve para armazenar e gerenciar e-mails.
+- **Database server:** serve para acessar o banco de dados da aplicação. Armazena informações. O cliente pode acessar esse server pela internet ou por intranet, um servidor dentro da rede local.
+- **DNS (Domain Name Service):** serve para deter uma lista de nomes e ip’s. Cada máquina tem um ip único, o DNS pega o url do site e pesquisa a qual ip ele corresponde.
+
+## HOSPEDAGEM DE SITES
+
+Colocar seus arquivos do site em um servidor que fica disponível na internet.
+
+Você deve contratar um plano de hospedagem.
+
+Conexão segura, criptografada: HTTPS.
+
+Também há o registro, para que o nome daquele site seja sua marca única. Nele você aponta o DNS.
+
+- **CONEXÃO FTP (file transfer protocol):** conexão com o servidor para você enviar e receber arquivos. Vem junto com o plano de hospedagem.
+- **LINGUAGENS DE PROGRAMAÇÃO SERVER-SIDE:** php, ruby, c#, JS, Java (back-end)
+- **LINGUAGENS DE PROGRAMAÇÃO CLIENT-SIDE:** javascript, linguagem que o navegador executa. O navegador usa um módulo chamado V8 que interpreta JS. Tem também o nodeJS que roda o V8. (front-end)
