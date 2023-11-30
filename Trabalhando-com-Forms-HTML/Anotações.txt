@@ -1,0 +1,101 @@
+# TRABALHANDO COM FORMULÁRIOS EM HTML
+
+## TAG <FORM>
+
+Formulário é o trecho do html em que o usuário irá inserir informações.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de cadastro</title>
+</head>
+<body>
+    <form name="signup" action="https://meusite.com.br/signup" method="post"> <!-- Action: Para onde o formulário será enviado-->
+        Nome: <input type="text" name="name" /><br>
+        Idade: <input type="number" name="number" /><br>
+        Senha: <input type="password" name="password" /><br> <!-- tipo password: coloca bolinhas na senha, fica invisível --> 
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
+```
+
+Em JS, por meio dos “name”s, é possível pegar as informações pelos nomes para validar.
+
+- Method= “GET” → ao mandar, as informações são mostradas na URL
+- Method = “POST” → ao mandar, não são mostradas pela URL, manda via body na requisição, embutido no corpo da requisição
+- É possível usar target na hora de enviar o formulário.
+- Autocomplete =”on” → Grava os dados do usuário, na próxima vez que acessar, os dados estarão salvos.
+- onAlgumaCoisa (evento)
+- onSubmit= “alert(’Formulário enviado’)” → evento que acontece quando enviar o formulário.
+
+## TAG <INPUT> E SEUS TIPOS
+
+Alguns atributos funcionam em certos navegadores, mas não em outros.
+
+- Input type=”tipo” → só aceita dados informados daquele tipo. Podem ser **text** - que aceita qualquer caractere. **Number** - aceita só números, nele é possível adicionar min=”” e max=””, step=””, para pular para um intervalo ao clicar na seta do campo. **Button** (explicação abaixo). **Range** - cria um campo scroll no formulário. **Color** - disponibiliza um seletor de cor no formulário. **Email** - só aceita emails no campo. **URL** - só aceita URL. **Date** - campo para adicionar data com o formato do país configurado no seu navegador. **Checkbox** - caixinha para marcar um ou mais. **Radio** - seleciona um ou outro. **Hidden** - campo invisível pro usuário, mas por baixo dos panos é enviado. **File** - campo para enviar arquivos, adicionando multiple, permite adicionar vários arquivos. **Search** - campo que possui um x para limpar uma busca.
+- <input type=”button” value=”texto” / > <button type=”button, menu, reset, submit”> nessa ordem: botão normal, subselect, reseta o formulário, envia o formulário.
+
+## CHECKBOX E RADIO
+
+- Para que o checkbox seja enviado e lido corretamente no backend, é preciso colocar nomes iguais para elementos da mesma lista, seguidos por []. Assim é possível entender que o nome não é só um valor, mas sim uma lista. Além disso o método precisa ser post.
+
+```html
+<form method="post">,
+        <h1>Você selecionou: pizza x</h1>
+        <p>Quais opcionais você deseja?</p>
+        <input type="checkbox" name="opcional[]" value="queijo"> + queijo <br> <!--BR = QUEBRA DE LINHA -->
+        <input type="checkbox" name="opcional[]" value="calabresa"> + calabresa <br>
+        <input type="checkbox" name="opcional[]" value="cebola"> + cebola <br>
+        <input type="checkbox" name="opcional[]" value="azeitona"> + azeitona <br>
+    </form>
+```
+
+- Para o radio funcionar corretamente, precisam ter o mesmo nome se estiverem na mesma lista, mas com valores diferentes. Assim não haverá o problema de ser possível marcar as duas opções e não conseguir desmarcar nenhuma.
+- **disabled** antes de name - campo que não é possível ser selecionado.
+
+```html
+<p>Borda recheada?</p>
+        <input type="radio" name="borda" value="sim"> Sim <br>
+        <input type="radio" name="borda" value="não"> Não <br>
+```
+
+## BUTTON E SEUS TIPOS
+
+- Button type=”button” → simplesmente cria um botão padrão.
+- Button type=”reset” → ao clicar nele, ele limpa os campos do formulário que ele está dentro.
+- Button type=”submit” → envia o formulário. Com o evento onsubmit=”” depois de form, o formulário será validado se está tudo correto antes de enviar. Onsubmit permite que não seja enviado o formulário que estiver com informações incorretas ou faltando.
+
+## SELECT E SEUS TIPOS
+
+Select-box: lista pré-definida de valores que você quer que o usuário escolha.
+
+```html
+<form onsubmit="" method="post">
+        <label>Nome:</label><input type="text" name="name"><br>
+        <label>Cargo:</label>
+        <select name="role">
+            <option value="">Selecione o cargo</option>
+            <option value="Administrativo">Administrativo</option>
+            <option value="Gerente">Gerente</option>
+             <option value="Diretor">Diretor</option>
+        </select>
+        
+    </form>
+```
+
+- option selected → Deixa um valor pré-selecionado. Ao enviar com o evento onsubmit, mesmo selecionando outro campo, será enviado o campo que está com selected.
+- select multiple → permite selecionar mais de um campo.
+
+## TEXT AREA
+
+Campo texto em que você pode colocar n informações.
+
+`<textarea name=”message”></textarea>`
+
+- O usuário pode alterar o tamanho da área no cantinho inferior direito, apertando e segurando-o.
+- Textarea rows → Limita o tamanho da área de texto para um número de linhas.
+- Textarea cols → Mesma coisa que as linhas, só que para colunas.
