@@ -1,0 +1,67 @@
+# ****Estruturando seu HTML + Formatações****
+
+## FORMATANDO TEXTOS
+
+- <i> itálico </i>
+- <b> negrito </b>
+- <u> underline </u>
+- <mark> marca-texto </mark>
+- <sup> elevado </sup>
+- <sub> inferior </sub>
+- <blockquote> citação, explicação </blockquote>
+
+## DIV E SPAN
+
+- Tags coringas para delimitar espaço.
+- O HTML é estruturado de fora primeiro para depois dentro.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/ba6a40b2-a4fa-4626-8022-e39089b4b063/575eeade-040c-4577-b507-44dac201544e/Untitled.png)
+
+- Div → Formato display block, ocupa o horizontal inteiro.
+- Span → não ocupa o espaço inteiro, não é possível ver ela com html puro sem mais nenhum atributo, não tem um formato. No CSS não é possível colocar cor em letra específica de uma tag p, pode ser interessante colocar um span em volta dessas letras específicas.
+
+## FIELDSETS
+
+- É parecido com a span, mas fica do lado de um campo, define o label de um campo
+- Forma um retângulo em volta dos elementos que ele encapsula.
+- Colocando a tag “legend” dentro dele, coloca um título entre esse fieldset.
+
+```html
+<fieldset>
+        <legend>Dados pessoais</legend>
+        <div class="row">
+            <label for="">Nome:</label><input type="text">
+            <label for="">Email:</label><input type="text">
+
+        </div>
+    </fieldset>
+```
+
+## IFRAMES
+
+- Versão moderna do embed.
+- Iframe abre uma janela na sua página, com conteúdo de outra página. A visualização é contada para a página do conteúdo original.
+- O embed só carregava mídia, iframe também carrega sites.
+
+```
+<h1>Funcionamento do Iframe</h1>
+    <iframe src="http://dio.me" frameborder="0"></iframe>
+```
+
+## RESENHA: SOBRE CORES
+
+### **Valores das cores no navegador:**
+
+- RGB (red, green, blue) → rgb 145, 130, 23
+- HEX (rgb em hexadecimal)
+- HSL (matiz, saturação e iluminação) → hsl 240, 50%, 60%
+- RGBA (rgb com canal alpha, transparência) → rgb 145, 130, 23, 0.5 (número de 0 a 1)
+- HSLA (HSL com canal alpha, transparência) → hsl 240, 50%, 60%, 0.9 (número de 0 a 1)
+
+**Hexadecimal**
+
+→ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
+
+→ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+
+#RRGGBB → #FF0000 → 255 0 0
